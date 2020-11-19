@@ -1,3 +1,7 @@
+// Code edited by 
+// Arnab Debnath
+// Khadija Kobra 
+
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 import { HttpClient,HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
@@ -21,7 +25,7 @@ export class SurveyComponent implements OnInit {
 
   surveyForm;
   config: any;
-  restURL = "http://34.74.117.226:8080/form"
+  restURL = "http://34.74.117.226:8080/forms"
   
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { 
@@ -90,6 +94,8 @@ export class SurveyComponent implements OnInit {
     this.http.post(this.restURL, JSON.stringify(surveyData), httpOptions).subscribe(data => console.log('success', JSON.stringify(data)),
      error => console.log('oops', error));
     console.log(surveyData);
+
+    window.alert('STUDENT SURVEY FORM SUBMITTED. Thanks.')
   }
 
 }

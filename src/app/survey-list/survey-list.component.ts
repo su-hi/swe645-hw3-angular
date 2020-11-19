@@ -1,3 +1,7 @@
+// Code edited by 
+// Arnab Debnath
+// Khadija Kobra 
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
@@ -11,7 +15,7 @@ import { catchError, delay, retry } from 'rxjs/operators';
 })
 export class SurveyListComponent implements OnInit {
   surveyList : any;
-  restURL = "http://34.74.117.226:8080/form"
+  restURL = "http://34.74.117.226:8080/forms"
 
   constructor(private http: HttpClient) { }
 
