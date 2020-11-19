@@ -1,0 +1,117 @@
+<!--  
+Khadija Kobra
+G01120432
+Arnab Debnath
+G01120433
+Creating a survey form and deploying it to EC2 instance - the HTML source
+-->
+
+<div class="content"> 
+    <h1 id="title">SWE 645 SURVEY FORM</h1>
+    <p id="description">Please take the following survey to help us improve! Don't want to take survey, go to <a href="http://kk-hw1.s3-website.us-east-2.amazonaws.com/">Home</a>
+    or show me <a href="http://34.74.117.226:8080/HW2/list.html"> List of All Surveys</a>!</p>
+    <form id='survey-form' [formGroup]="surveyForm" (ngSubmit)="onSubmit(surveyForm.value)">
+     
+      <div class='form-group'>
+      <label id="first-name-label" for="first_name">First Name</label>
+      <input formControlName="firstName" type="text" id="first_name" name="first_name" placeholder ='Enter your First Name' required>
+      </div>
+     
+      <div class='form-group'>
+        <label id="last-name-label" for="last_name">Last Name</label>
+        <input formControlName="lastName" type="text" id="last_name" name="last_name" placeholder ='Enter your Last Name' required>
+      </div>
+      
+      <div class='form-group'>
+      <label  id="address-label" for="address">Street Address</label>
+      <input formControlName="streetAddress" type="text" id="address" name="address" placeholder ='Street Address' required>
+      </div>
+      
+      <div class='form-group'>
+        <label id="city-label" for="city">City</label>
+        <input formControlName="city" type="text" id="city" name="city" placeholder ='City' required>
+      </div>
+      
+       <div class='form-group'>
+      <label  id="state-label" for="state">State</label>
+      <input formControlName="state" type="text" id="state" name="state" placeholder ='State' required>
+      </div>
+     
+     <div class='form-group'>
+        <label id="number-label" for="zip">Zip</label>
+        <input formControlName="zip" id='zip' type="number" id="zip" name="zip" placeholder="Zip" required>
+      </div>
+      
+       <div class='form-group'>
+        <label id="number-label" for="phone">Phone Number</label>
+        <input formControlName="phoneNumber" id='number' type="number" id="number" name="number" placeholder="Number" required>
+      </div>
+      
+      <div class='form-group'>
+        <label id="email-label" for="email">Email</label>
+        <input formControlName="email" type="email" id="email" name="email" placeholder ='Enter your Email' required>
+      </div>
+      
+     <div class='form-group'>
+        <label id="date-label" for="date">Date of Survey</label>
+        <input formControlName="dateOfSurvey" type="date" id="date" name="date" placeholder ='Enter the Date of Survey' required>
+      </div>
+     
+      <div class="form-group">
+        <p id='improvementLabel'>What did you like the most about the campus?</p>
+        <div id="improvment">
+          <input type="checkbox" id='improvment1' name="improvment1" value="students" (change)="onCheckChange($event)">
+          <label id='checkboxLabel' for="improvment1">Students</label><br>
+          <input type="checkbox" id='improvment2' name="improvment2" value="location" (change)="onCheckChange($event)">
+          <label id='checkboxLabel' for="improvment2">Location</label><br>
+          <input type="checkbox" id='improvment3' name="improvment3" value="campus" (change)="onCheckChange($event)">
+          <label id='checkboxLabel' for="improvment3">Campus</label><br>
+          <input type="checkbox" id='improvment4' name="improvment4" value="atmosphere" (change)="onCheckChange($event)"> 
+          <label id='checkboxLabel' for="improvment4">Atmosphere</label><br>
+          <input type="checkbox" id='improvment5' name="improvment5" value="dorm Rooms" (change)="onCheckChange($event)">
+          <label id='checkboxLabel' for="improvment5">Dorm Rooms</label><br>
+          <input type="checkbox" id='improvment6' name="improvment6" value="S\sports" (change)="onCheckChange($event)">
+          <label id='checkboxLabel' for="improvment6">Sports</label><br>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <p id='recommendationLabel'>How did you become interested in the university?</p>
+        <div id='recommendation'>
+        <input type="radio" id="friends"  value="friends" formControlName="interest">
+        <label id='radioLabel' for="friends">Friends</label><br>
+  
+        <input type="radio" id="television" value="television" formControlName="interest">
+        <label id='radioLabel' for="television">Television</label><br>
+        
+        <input type="radio" id="internet" value="internet" formControlName="interest">
+        <label id='radioLabel' for="internet">Internet</label><br>
+        
+        <input type="radio" id="others" value="others" formControlName="interest">
+        <label id='radioLabel' for="others">Others</label>
+        </div>
+      </div>
+     
+      <div class='form-group'>
+        <label for="dropdown">How would you likely recommend us to other prospective students?</label>
+        <select formControlName="recommend">
+          <option value="" selected disabled>Select Option</option>
+          <option value="Very Likely">Very Likely</option>
+          <option value="Likely">Likely</option>
+          <option value="Unlikely">Unlikely</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" > Submit </button>
+      </div>
+      
+      <div class="form-group">
+        <button type="reset" > Cancel </button>
+      </div>
+      
+    </form>
+  </div>
+  
+  
+  

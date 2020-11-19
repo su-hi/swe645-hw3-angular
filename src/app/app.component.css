@@ -1,0 +1,87 @@
+body {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 13 px;
+    padding: 0;
+    margin: 0;
+    background: rgb(173, 216, 230, 0.5);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  #nav {
+    background: url("/assets/img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  #nav ul{
+    list-style: none;
+  }
+  #nav li {
+    display: inline-block;
+    padding: 10px;
+  }
+  #nav li:hover {
+    background: #95c2de;
+    
+  }
+  #nav li:hover a{
+    color: black;
+  }
+  .content {
+    padding-top: 90px;
+  }
+  .anchor {
+    display: block; /*this is important!*/
+  }
+  .title {
+    position: relative;
+    display: block;
+    top: -50px;
+    padding: 20px 0;
+    font-size: 1.9em;
+  }
+  .title:before{
+    font-size: 1.5em;
+    content: "\005B";
+  }
+  .title:after{
+    font-size: 1.5em;
+    content: "\005D";
+  }
+  .page-divider {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 500px;
+    height: 100%; 
+    overflow: hidden;
+    background-size: cover;
+  }
+  .pgd1{background-image: url("/assets/img/rainbow.jpg");}
+  .page {
+    min-width: 200px;
+    padding: 50px 100px;
+  }
+  #page1 {background: LightBlue;}
+  #page2 {background: #95c2de;}
+  
+  footer {
+    min-height: 50px;
+    padding: 25px;
+  }
+  footer p {
+    -webkit-column-count: .25;
+    -webkit-column-gap: 5px;
+    -moz-column-count: .25;
+    -moz-column-gap: 5px;
+    -o-column-count: .25;
+    -o-column-gap: 5px;
+    column-count: .25;
+    column-gap: 5px;
+  }
+  
