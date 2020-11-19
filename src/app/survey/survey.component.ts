@@ -21,7 +21,7 @@ export class SurveyComponent implements OnInit {
 
   surveyForm;
   config: any;
-  restURL = "http://34.74.117.226:8080/forms"
+  restURL = "http://34.74.117.226:8080/form"
   
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { 

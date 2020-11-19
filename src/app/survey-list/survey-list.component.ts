@@ -11,7 +11,7 @@ import { catchError, delay, retry } from 'rxjs/operators';
 })
 export class SurveyListComponent implements OnInit {
   surveyList : any;
-  restURL = "http://34.74.117.226:8080/forms"
+  restURL = "http://34.74.117.226:8080/form"
 
   constructor(private http: HttpClient) { }
 
